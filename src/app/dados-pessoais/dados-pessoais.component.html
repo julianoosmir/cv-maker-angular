@@ -1,0 +1,35 @@
+<div id="wapper">
+  <form [formGroup]="dadosPessoaForm" (ngSubmit)="onSubmit()" class="form-container">
+    <h2> Dados <span> Pessoais</span></h2>
+
+    <div class="form-group">
+      <label for="nome">Nome</label>
+      <input id="nome" formControlName="nome" type="text"/>
+    </div>
+    <div class="form-group">
+      <label for="telefone">Telefone</label>
+      <input id="telefone" formControlName="telefone" type="tel"/>
+    </div>
+    <div class="form-group">
+      <label for="whatsapp">WhatsApp</label>
+      <input id="whatsapp" formControlName="whatsapp" type="tel"/>
+    </div>
+    <div class="form-group">
+      <label for="site">Site</label>
+      <input id="site" formControlName="site" type="url"/>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input id="email" formControlName="email" type="email"/>
+    </div>
+    <div class="form-group">
+      <label for="endereco">Endereço</label>
+      <input id="endereco" formControlName="endereco" type="text"/>
+    </div>
+    <div class="form-group">
+      <label for="dataDeNascimento">Data de Nascimento</label>
+      <input id="dataDeNascimento" formControlName="dataDeNascimento" type="date"/>
+    </div>
+    <button type="submit" [disabled]="dadosPessoaForm.invalid">proximo</button>
+  </form>
+</div>
